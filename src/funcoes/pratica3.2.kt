@@ -73,24 +73,24 @@ fun filtrarNumerosPositivos(numeros: List<Int>, filtro: (Int) -> Boolean): List<
     // Implemente a função para filtrar números positivos
     // Exemplo de chamada: filtrarNumerosPositivos(listOf(-1, 2, 3, -4)) { it > 0 }
     // Resultado esperado: [2, 3]
-    return listOf()
+    return numeros.filter(filtro)
 }
 
 // 5. Lambdas
 
 //Descomentar as funçôes para implementar a resposta
 
-//val ehPar: (Int) -> Boolean = { numero ->
-//    // Implemente a expressão lambda para verificar se o número é par
-//    // Exemplo de chamada: ehPar(4)
-//    // Resultado esperado: true
-//}
+val ehPar: (Int) -> Boolean = { numero -> numero % 2 == 0
+    // Implemente a expressão lambda para verificar se o número é par
+    // Exemplo de chamada: ehPar(4)
+    // Resultado esperado: true
+}
 
-//val calcularSalario: (Int, Double) -> Double = { horasTrabalhadas, valorPorHora ->
-//    // Implemente a expressão lambda para calcular o salário com base nas horas trabalhadas e valor por hora
-//    // Exemplo de chamada: calcularSalario(40, 15.0)
-//    // Resultado esperado: 600.0
-//}
+val calcularSalario: (Int, Double) -> Double = { horasTrabalhadas, valorPorHora -> horasTrabalhadas * valorPorHora
+    // Implemente a expressão lambda para calcular o salário com base nas horas trabalhadas e valor por hora
+    // Exemplo de chamada: calcularSalario(40, 15.0)
+    // Resultado esperado: 600.0
+}
 
 // Função principal para testar as práticas
 fun main() {
@@ -114,6 +114,6 @@ fun main() {
 
     // 5. Lambdas
     // Descomentar os prints quando for implementado as funções Lambdas
-    //println("Número é par? ${ehPar(4)}")  // Esperado: true
-    //println("Salário calculado: ${calcularSalario(40, 15.0)}")  // Esperado: 600.0
+    println("Número é par? ${ehPar(4)}")  // Esperado: true
+    println("Salário calculado: ${calcularSalario(40, 15.0)}")  // Esperado: 600.0
 }
